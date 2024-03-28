@@ -726,7 +726,7 @@ endif()
 set(CUDA_CXX_FLAGS "")
 
 if (LLAMA_CUBLAS)
-    set(CUDA_FLAGS ${CXX_FLAGS} -use_fast_math)
+    set(CUDA_FLAGS ${CXX_FLAGS} -use_fast_math -allow-unsupported-compiler)
     if (NOT MSVC)
         list(APPEND CUDA_FLAGS -Wno-pedantic)
     endif()

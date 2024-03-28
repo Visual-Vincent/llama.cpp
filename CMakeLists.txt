@@ -727,6 +727,8 @@ set(CUDA_CXX_FLAGS "")
 
 if (LLAMA_CUBLAS)
     set(CUDA_FLAGS ${CXX_FLAGS} -use_fast_math)
+    set(CUDA_FLAGS_INIT -allow-unsupported-compiler)
+    set(CUDAFLAGS -allow-unsupported-compiler)
     list(APPEND CUDA_FLAGS -allow-unsupported-compiler)
     list(APPEND CUDA_CXX_FLAGS -allow-unsupported-compiler)
     if (NOT MSVC)

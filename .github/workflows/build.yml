@@ -19,6 +19,8 @@ env:
   BRANCH_NAME: ${{ github.head_ref || github.ref_name }}
   GGML_NLOOP: 3
   GGML_N_THREADS: 1
+  CMAKE_CUDA_FLAGS: -allow-unsupported-compiler
+  CMAKE_CUDA_FLAGS_INIT: -allow-unsupported-compiler
 
 jobs:
   windows-latest-cmake-cublas:
